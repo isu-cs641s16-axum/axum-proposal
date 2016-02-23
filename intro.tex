@@ -2,24 +2,30 @@
 
 \begin{frame}
 \begin{itemize}
+
   \item The Problem
   \begin{itemize}
-    \item % TODO What is the problem we solved
+    \item Correctness of Pig programs depends upon correctness of compilation
+          from Pig semantic model to the MapReduce semantic model.
   \end{itemize}
 
   \item Our Approach
   \begin{itemize}
-    \item % TODO What is our proposed solution to the problem
+    \item Coq: Formally model languages, semantics, compilation models; make
+          correctness/equivalency proofs.
   \end{itemize}
 
   \item Evaluation
   \begin{itemize}
-    \item % TODO Perhaps overview the evaluation
+    \item Coq: Successfully write correctness proofs.
   \end{itemize}
 
   \item Benefits
   \begin{itemize}
-    \item % TODO What are the benefits of our solution
+    \item Formalization of both Pig and MapReduce semantic models can be reused.
+    \item More advanced (i.e. optimizing) compilation algorithms can be modeled
+          and validated.
   \end{itemize}
+
 \end{itemize}
 \end{frame}
