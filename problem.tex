@@ -19,6 +19,31 @@
 
 \end{frame}
 
+\subsection{Related Work}
+\begin{frame}{Realted Work}
+\emph{Using Coq in Specification and Program Extraction of Hadoop MapReduce Application - Ono et al, SEFM '11}:
+\begin{itemize}
+	\item The authors constructed a Coq model of the Hadoop Map Reduce framework by formalizing specification of Hadoop libraries and lemmas with their proofs. 
+	\item Based on the model they formally described the correctness of MapReduce applications. 
+	\item Although the lemmas were application independent, the mapper and reducer functions were application specific. Investigating a range of map-reduce application was part of their future work.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Related Work}
+ \emph{Formal Derivation of Distributed MapReduce - Pereverzeva et al, ABZ '14}:\begin{itemize}
+	\item They proposed an approach to formal derivation, but it relies on stepwise refinement of Event-B. 
+	\item This approach also relies largely on proof based verification of Event-B and does not provide any scope for extension of mapreduce.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Related Work}
+\emph{Building a HighLevel Dataflow System on top of MapReduce: The Pig Experience, Gates et al, VLDB Endowment '09}: 
+\begin{itemize}
+	\item This paper outlines the compilation phase of PigLatin programs and how the logical plan of PigLatin is translated to actual Hadoop map-reduce tasks. 
+	\item But neither the semantics nor the compilation to map-reduce framework have been formalized with proof of correctness. 
+\end{itemize}
+\end{frame}
+
 \subsection{Background}
 \begin{frame}{Pig Latin Compilation}
 \begin{itemize}
@@ -43,7 +68,7 @@
 
 \begin{frame}{MapReduce Execution Model}
 \centerline{\includegraphics[scale=0.5]{Images/MapReduce_Execution.JPG}}
-\let\thefootnote\relax\footnotetext{\tiny The Pig Experience - Gates et al.} 
+\let\thefootnote\relax\footnotetext{\tiny The Pig Experience, Gates et al, VLDB Endowment '09} 
 \end{frame}
 
 \subsection{Pig Latin Compilation}
@@ -57,7 +82,7 @@
 
 \begin{frame}{PigLatin - Logical Plan}
 \centerline{\includegraphics[scale=0.55]{Images/PigLatin.JPG}}
-\let\thefootnote\relax\footnotetext{\tiny The Pig Experience - Gates et al.}
+\let\thefootnote\relax\footnotetext{\tiny The Pig Experience, Gates et al, VLDB Endowment '09}
 \end{frame}
 
 \subsection{Generating MapReduce Jobs}
@@ -72,12 +97,12 @@
 
 \begin{frame}
 \centerline{\includegraphics[scale=0.45]{Images/Logical_Physical.JPG} }
-\let\thefootnote\relax\footnotetext{\tiny The Pig Experience - Gates et al.}
+\let\thefootnote\relax\footnotetext{\tiny The Pig Experience, Gates et al, VLDB Endowment '09}
 \end{frame}
 
 \begin{frame}
 \centerline{\includegraphics[scale=0.45]{Images/Physical_MapReduce.JPG}}
-\let\thefootnote\relax\footnotetext{\tiny The Pig Experience - Gates et al.}
+\let\thefootnote\relax\footnotetext{\tiny The Pig Experience, Gates et al, VLDB Endowment '09}
 \end{frame}
 
 \begin{frame}{Pig to MapReduce}
