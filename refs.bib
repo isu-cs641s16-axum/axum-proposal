@@ -1,0 +1,202 @@
+% Encoding: UTF-8
+
+@InCollection{chen2015commutativity,
+  author =    {Chen, Yu-Fang and Hong, Chih-Duo and Sinha, Nishant and Wang, Bow-Yaw},
+  title =     {Commutativity of Reducers},
+  booktitle = {Tools and Algorithms for the Construction and Analysis of Systems},
+  publisher = {Springer},
+  year =      {2015},
+  editor =    {Baier, Christel and Tinelli, Cesare},
+  pages =     {131--146},
+  address =   {Berlin, Heidelberg},
+  abstract =  {In the Map-Reduce programming model for data parallel computation, a reducer computes an output from a list of input values associated with a key. The inputs however may not arrive at a reducer in a fixed order due to non-determinism in transmitting key-value pairs over the network. This gives rise to the reducer commutativity problem, that is, is the reducer computation independent of the order of its inputs? In this paper, we study the reducer commutativity problem formally. We introduce a syntactic subset of integer programs termed integer reducers to model real-world reducers. In spite of syntactic restrictions, we show that checking commutativity of integer reducers over unbounded lists of exact integers is undecidable. It remains undecidable even with input lists of a fixed length. The problem however becomes decidable for reducers over unbounded input lists of bounded integers. We propose an efficient reduction of commutativity checking to conventional assertion checking and report experimental results using various off-the-shelf program analyzers.},
+  doi =       {10.1007/978-3-662-46681-0_9},
+  isbn =      {978-3-662-46681-0},
+  url =       {http://dx.doi.org/10.1007/978-3-662-46681-0_9}
+}
+
+@Article{dean2008mapreduce,
+  author =    {Jeffrey Dean and Sanjay Ghemawat},
+  title =     {MapReduce: simplified data processing on large clusters},
+  journal =   {Communications of the ACM},
+  year =      {2008},
+  volume =    {51},
+  number =    {1},
+  pages =     {107--113},
+  month =     {jan},
+  abstract =  {MapReduce is a programming model and an associated implementation for processing and generating large datasets that is amenable to a broad variety of real-world tasks. Users specify the computation in terms of a map and a reduce function, and the underlying runtime system automatically parallelizes the computation across large-scale clusters of machines, handles machine failures, and schedules inter-machine communication to make efficient use of the network and disks. Programmers find the system easy to use: more than ten thousand distinct MapReduce programs have been implemented internally at Google over the past four years, and an average of one hundred thousand MapReduce jobs are executed on Google's clusters every day, processing a total of more than twenty petabytes of data per day.},
+  doi =       {10.1145/1327452.1327492},
+  publisher = {ACM},
+  url =       {http://dx.doi.org/10.1145/1327452.1327492}
+}
+
+@Article{dorre2015modeling,
+  author =    {Jens Dörre and Sven Apel and Christian Lengauer},
+  title =     {Modeling and optimizing mapreduce programs},
+  journal =   {Concurrency and Computation: Practice and Experience},
+  year =      {2015},
+  volume =    {27},
+  number =    {7},
+  pages =     {1734--1766},
+  month =     {jul},
+  abstract =  {MapReduce frameworks allow programmers to write distributed, data-parallel programs that operate on multisets. These frameworks offer considerable flexibility to support various kinds of programs and data. To understand the essence of the programming model better and to provide a rigorous foundation for optimizations, we present an abstract, functional model of MapReduce along with a number of customization options. We demonstrate that the MapReduce programming model can also represent programs that operate on lists, which differ from multisets in that the order of elements matters. Along with the functional model, we offer a cost model that allows programmers to estimate and compare the performance of MapReduce programs. Based on the cost model, we introduce two transformation rules aiming at performance optimization of MapReduce programs, which also demonstrates the usefulness of our model. In an exploratory study, we assess the impact of applying these rules to two applications. The functional model and the cost model provide insights at a proper level of abstraction into why the optimization works.},
+  doi =       {10.1002/cpe.3333},
+  publisher = {Wiley Online Library},
+  url =       {http://dx.doi.org/10.1002/cpe.3333}
+}
+
+@Article{gates2009building,
+  author =    {Gates, Alan F and Natkovich, Olga and Chopra, Shubham and Kamath, Pradeep and Narayanamurthy, Shravan M and Olston, Christopher and Reed, Benjamin and Srinivasan, Santhosh and Srivastava, Utkarsh},
+  title =     {Building a high-level dataflow system on top of Map-Reduce: the Pig experience},
+  journal =   {Proceedings of the VLDB Endowment},
+  year =      {2009},
+  volume =    {2},
+  number =    {2},
+  pages =     {1414--1425},
+  month =     {aug},
+  abstract =  {Increasingly, organizations capture, transform and analyze enormous data sets. Prominent examples include internet companies and e-science. The Map-Reduce scalable dataflow paradigm has become popular for these applications. Its simple, explicit dataflow programming model is favored by some over the traditional high-level declarative approach: SQL. On the other hand, the extreme simplicity of Map-Reduce leads to much low-level hacking to deal with the many-step, branching dataflows that arise in practice. Moreover, users must repeatedly code standard operations such as join by hand. These practices waste time, introduce bugs, harm readability, and impede optimizations.
+
+Pig is a high-level dataflow system that aims at a sweet spot between SQL and Map-Reduce. Pig offers SQL-style high-level data manipulation constructs, which can be assembled in an explicit dataflow and interleaved with custom Map- and Reduce-style functions or executables. Pig programs are compiled into sequences of Map-Reduce jobs, and executed in the Hadoop Map-Reduce environment. Both Pig and Hadoop are open-source projects administered by the Apache Software Foundation.
+
+This paper describes the challenges we faced in developing Pig, and reports performance comparisons between Pig execution and raw Map-Reduce execution.},
+  doi =       {10.14778/1687553.1687568},
+  publisher = {VLDB Endowment},
+  url =       {http://dx.doi.org/10.14778/1687553.1687568}
+}
+
+@Article{lammel2008google,
+  author =    {Ralf Lämmel},
+  title =     {Google’s MapReduce programming model—Revisited},
+  journal =   {Science of computer programming},
+  year =      {2008},
+  volume =    {70},
+  number =    {1},
+  pages =     {1--30},
+  month =     {jan},
+  abstract =  {Google’s MapReduce programming model serves for processing large data sets in a massively parallel manner. We deliver the first rigorous description of the model including its advancement as Google’s domain-specific language Sawzall. To this end, we reverse-engineer the seminal papers on MapReduce and Sawzall, and we capture our findings as an executable specification. We also identify and resolve some obscurities in the informal presentation given in the seminal papers. We use typed functional programming (specifically Haskell) as a tool for design recovery and executable specification. Our development comprises three components: (i) the basic program skeleton that underlies MapReduce computations; (ii) the opportunities for parallelism in executing MapReduce computations; (iii) the fundamental characteristics of Sawzall’s aggregators as an advancement of the MapReduce approach. Our development does not formalize the more implementational aspects of an actual, distributed execution of MapReduce computations.},
+  doi =       {10.1016/j.scico.2007.07.001},
+  keywords =  {Data processing; Parallel programming; Distributed programming; Software design; Executable specification; Typed functional programming; MapReduce; Sawzall; Map; Reduce; List homomorphism; Haskell},
+  publisher = {Elsevier},
+  url =       {http://dx.doi.org/10.1016/j.scico.2007.07.001}
+}
+
+@InProceedings{leesatapornwongsa2016taxdc,
+  author =    {Leesatapornwongsa, Tanakorn and Lukman, Jeffrey F and Lu, Shan and Gunawi, Haryadi S},
+  title =     {TaxDC: A Taxonomy of Non-Deterministic Concurrency Bugs in Datacenter Distributed Systems},
+  booktitle = {Proceedings of the 21th ACM International Conference on Architectural Support for Programming Languages and Operating Systems},
+  year =      {2016},
+  series =    {ASPLOS '16},
+  abstract =  {We present TaxDC, the largest and most comprehensive
+taxonomy of non-deterministic concurrency bugs in distributed
+systems. We study 104 distributed concurrency (DC)
+bugs from four widely-deployed cloud-scale datacenter distributed
+systems, Cassandra, Hadoop MapReduce, HBase
+and ZooKeeper. We study DC-bug characteristics along several
+axes of analysis such as the triggering timing condition
+and input preconditions, error and failure symptoms, and fix
+strategies, collectively stored as 2,083 classification labels
+in TaxDC database. We discuss how our study can open up
+many new research directions in combating DC bugs.},
+  doi =       {10.1145/2872362.2872374},
+  url =       {http://dx.doi.org/10.1145/2872362.2872374}
+}
+
+@InProceedings{olston2008pig,
+  author =       {Christopher Olston and Benjamin Reed and Utkarsh Srivastava and Ravi Kumar and Andrew Tomkins},
+  title =        {Pig-Latin: A not-so-foreign language for data processing},
+  booktitle =    {Proceedings of the 2008 ACM SIGMOD international conference on Management of data},
+  year =         {2008},
+  pages =        {1099--1110},
+  organization = {ACM},
+  publisher =    {Association for Computing Machinery ({ACM})},
+  abstract =     {There is a growing need for ad-hoc analysis of extremely large data sets, especially at internet companies where innovation critically depends on being able to analyze terabytes of data collected every day. Parallel database products, e.g., Teradata, offer a solution, but are usually prohibitively expensive at this scale. Besides, many of the people who analyze this data are entrenched procedural programmers, who find the declarative, SQL style to be unnatural. The success of the more procedural map-reduce programming model, and its associated scalable implementations on commodity hardware, is evidence of the above. However, the map-reduce paradigm is too low-level and rigid, and leads to a great deal of custom user code that is hard to maintain, and reuse.
+
+We describe a new language called Pig Latin that we have designed to fit in a sweet spot between the declarative style of SQL, and the low-level, procedural style of map-reduce. The accompanying system, Pig, is fully implemented, and compiles Pig Latin into physical plans that are executed over Hadoop, an open-source, map-reduce implementation. We give a few examples of how engineers at Yahoo! are using Pig to dramatically reduce the time required for the development and execution of their data analysis tasks, compared to using Hadoop directly. We also report on a novel debugging environment that comes integrated with Pig, that can lead to even higher productivity gains. Pig is an open-source, Apache-incubator project, and available for general use.},
+  doi =          {10.1145/1376616.1376726},
+  url =          {http://dx.doi.org/10.1145/1376616.1376726}
+}
+
+@InCollection{ono2011using,
+  author =    {Kosuke Ono and Yoichi Hirai and Yoshinori Tanabe and Natsuko Noda and Masami Hagiya},
+  title =     {Using Coq in Specification and Program Extraction of Hadoop MapReduce Applications},
+  booktitle = {Software Engineering and Formal Methods},
+  publisher = {Springer},
+  year =      {2011},
+  pages =     {350--365},
+  abstract =  {Hadoop MapReduce is a framework for distributed computation on key-value pairs. The goal of this research is to verify actual running code of MapReduce applications. We first constructed an abstract model of MapReduce computation with the proof assistant Coq. In the model, mappers and reducers in MapReduce computation are modeled as functions in Coq, and a specification of a MapReduce application is expressed in terms of invariants among functions involving its mapper and reducer. The model also provides modular proofs of lemmas that do not depend on applications. To achieve the goal, we investigated the feasibility of two approaches. In one approach, we transformed verified mapper and reducer functions into Haskell programs and executed them under Hadoop Streaming. In the other approach, we verified JML annotations on Java programs of the mapper and reducer using Krakatoa, translated them into Coq axioms, and proved Coq specifications from them. In either approach, we were able to verify correctness of MapReduce applications that actually run on the Hadoop MapReduce framework.},
+  doi =       {10.1007/978-3-642-24690-6_24},
+  url =       {http://dx.doi.org/10.1007/978-3-642-24690-6_24}
+}
+
+@InCollection{pereverzeva2014formal,
+  author =    {Pereverzeva, Inna and Butler, Michael and Fathabadi, Asieh Salehi and Laibinis, Linas and Troubitsyna, Elena},
+  title =     {Formal Derivation of Distributed MapReduce},
+  booktitle = {Abstract State Machines, Alloy, B, TLA, VDM, and Z},
+  publisher = {Springer Berlin Heidelberg},
+  year =      {2014},
+  editor =    {Ait Ameur, Yamine and Schewe, Klaus-Dieter},
+  series =    {4th International Conference, ABZ 2014, Toulouse, France, June 2-6, 2014. Proceedings},
+  pages =     {238--254},
+  address =   {Berlin, Heidelberg},
+  abstract =  {MapReduce is a powerful distributed data processing model that is currently adopted in a wide range of domains to efficiently handle large volumes of data, i.e., cope with the big data surge. In this paper, we propose an approach to formal derivation of the MapReduce framework. Our approach relies on stepwise refinement in Event-B and, in particular, the event refinement structure approach – a diagrammatic notation facilitating formal development. Our approach allows us to derive the system architecture in a systematic and well-structured way. The main principle of MapReduce is to parallelise processing of data by first mapping them to multiple processing nodes and then merging the results. To facilitate this, we formally define interdependencies between the map and reduce stages of MapReduce. This formalisation allows us to propose an alternative architectural solution that weakens blocking between the stages and, as a result, achieves a higher degree of parallelisation of MapReduce computations.},
+  doi =       {10.1007/978-3-662-43652-3_21},
+  isbn =      {978-3-662-43652-3},
+  url =       {http://dx.doi.org/10.1007/978-3-662-43652-3_21}
+}
+
+@InProceedings{su2009modeling,
+  author =       {Su, Wen and Yang, Fan and Zhu, Huibiao and Li, Qin},
+  title =        {Modeling MapReduce with CSP},
+  booktitle =    {2009 Third IEEE International Symposium on Theoretical Aspects of Software Engineering},
+  year =         {2009},
+  pages =        {301--302},
+  month =        {jul},
+  organization = {IEEE},
+  publisher =    {Institute of Electrical {\&} Electronics Engineers ({IEEE})},
+  abstract =     {As a programming model, MapReduce is implied for easier processing and generating large cluster of distributed data sets. We use CSP framework to model MapReduce system through which the parallelization of the computation and the distribution of data across multiple machines can be reflected. Some properties of MapReduce can be verified based on the achieved model.},
+  doi =          {10.1109/TASE.2009.28},
+  url =          {http://dx.doi.org/10.1109/TASE.2009.28}
+}
+
+@InProceedings{xiao2014nondeterminism,
+  author =       {Xiao, Tian and Zhang, Jiaxing and Zhou, Hucheng and Guo, Zhenyu and McDirmid, Sean and Lin, Wei and Chen, Wenguang and Zhou, Lidong},
+  title =        {Nondeterminism in MapReduce considered harmful? an empirical study on non-commutative aggregators in MapReduce programs},
+  booktitle =    {Companion Proceedings of the 36th International Conference on Software Engineering},
+  year =         {2014},
+  pages =        {44--53},
+  organization = {ACM},
+  publisher =    {Association for Computing Machinery ({ACM})},
+  abstract =     {The simplicity of MapReduce introduces unique subtleties that cause hard-to-detect bugs; in particular, the unfixed order of reduce function input is a source of nondeterminism that is harmful if the reduce function is not commutative and sensitive to input order. Our extensive study of production MapReduce programs reveals interesting findings on commutativity, nondeterminism, and correctness. Although non-commutative reduce functions lead to five bugs in our sample of well-tested production programs, we surprisingly have found that many non-commutative reduce functions are mostly harmless due to, for example, implicit data properties. These findings are instrumental in advancing our understanding of MapReduce program correctness.},
+  doi =          {10.1145/2591062.2591177},
+  url =          {http://dx.doi.org/10.1145/2591062.2591177}
+}
+
+@InProceedings{yang2007map,
+  author =       {Yang, Hung-chih and Dasdan, Ali and Hsiao, Ruey-Lung and Parker, D Stott},
+  title =        {Map-reduce-merge: simplified relational data processing on large clusters},
+  booktitle =    {Proceedings of the 2007 ACM SIGMOD international conference on Management of data},
+  year =         {2007},
+  pages =        {1029--1040},
+  organization = {ACM},
+  publisher =    {Association for Computing Machinery ({ACM})},
+  abstract =     {Map-Reduce is a programming model that enables easy development of scalable parallel applications to process a vast amount of data on large clusters of commodity machines. Through a simple interface with two functions, map and reduce, this model facilitates parallel implementation of many real-world tasks such as data processing jobs for search engines and machine learning.
+
+However,this model does not directly support processing multiple related heterogeneous datasets. While processing relational data is a common need, this limitation causes difficulties and/or inefficiency when Map-Reduce is applied on relational operations like joins.
+
+We improve Map-Reduce into a new model called Map-Reduce-Merge. It adds to Map-Reduce a Merge phase that can efficiently merge data already partitioned and sorted (or hashed) by map and reduce modules. We also demonstrate that this new model can express relational algebra operators as well as implement several join algorithms.},
+  doi =          {10.1145/1247480.1247602},
+  url =          {http://dx.doi.org/10.1145/1247480.1247602}
+}
+
+@InProceedings{yang2010formalizing,
+  author =       {Yang, Fan and Su, Wen and Zhu, Huibiao and Li, Qin},
+  title =        {Formalizing MapReduce with CSP},
+  booktitle =    {Engineering of Computer Based Systems (ECBS), 2010 17th IEEE International Conference and Workshops on},
+  year =         {2010},
+  pages =        {358--367},
+  organization = {IEEE},
+  publisher =    {Institute of Electrical {\&} Electronics Engineers ({IEEE})},
+  abstract =     {As a programming model, MapReduce is popularly and widely used in processing and generating large cluster of data sets distributed on large amount of machines. With its widespread use, its validity and other major properties need to be analyzed in a formal framework. In this paper, a formal model is presented using CSP method. We focus on the dominant parts of MapReduce and formalize them in detail. Through this formal model, the processing and function of each component can be clearly reflected. Moreover, we illustrate this formal model by an example computation. The result reflects the validity of MapReduce in some appropriate applications.},
+  doi =          {10.1109/ECBS.2010.50},
+  url =          {http://dx.doi.org/10.1109/ECBS.2010.50}
+}
