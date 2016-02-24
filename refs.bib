@@ -15,19 +15,13 @@
   url =       {http://dx.doi.org/10.1007/978-3-662-46681-0_9}
 }
 
-@Article{dean2008mapreduce,
+@InProceedings{dean2004mapreduce,
   author =    {Jeffrey Dean and Sanjay Ghemawat},
   title =     {MapReduce: simplified data processing on large clusters},
-  journal =   {Communications of the ACM},
-  year =      {2008},
-  volume =    {51},
-  number =    {1},
-  pages =     {107--113},
-  month =     {jan},
+  booktitle = {OSDI'04: Sixth Symposium on Operating System Design and Implementation,},
+  year =      {2004},
+  series =    {OSDI'04},
   abstract =  {MapReduce is a programming model and an associated implementation for processing and generating large datasets that is amenable to a broad variety of real-world tasks. Users specify the computation in terms of a map and a reduce function, and the underlying runtime system automatically parallelizes the computation across large-scale clusters of machines, handles machine failures, and schedules inter-machine communication to make efficient use of the network and disks. Programmers find the system easy to use: more than ten thousand distinct MapReduce programs have been implemented internally at Google over the past four years, and an average of one hundred thousand MapReduce jobs are executed on Google's clusters every day, processing a total of more than twenty petabytes of data per day.},
-  doi =       {10.1145/1327452.1327492},
-  publisher = {ACM},
-  url =       {http://dx.doi.org/10.1145/1327452.1327492}
 }
 
 @Article{dorre2015modeling,
@@ -62,6 +56,28 @@ This paper describes the challenges we faced in developing Pig, and reports perf
   doi =       {10.14778/1687553.1687568},
   publisher = {VLDB Endowment},
   url =       {http://dx.doi.org/10.14778/1687553.1687568}
+}
+
+@Misc{goerigk1996compiler,
+  author =    {Wolfgang Goerigk and Axel Dold and Thilo Gaul and Gerhard Goos and Andreas Heberle and Friedrich W. Von Henke and Ulrich Hoffmann and Hans Langmaack and Holger Pfeifer and Harald Ruess and Wolf Zimmermann},
+  title =     {Compiler Correctness and Implementation Verification: The Verifix Approach},
+  year =      {1996},
+  abstract =  {Compiler correctness is crucial to the software engineering of safety critical software. It depends on both the correctness of the compiling specification and the correctness of the compiler implementation. We will discuss compiler correctness for practically relevant source languages and target machines in order to find an adequate correctness notion for the compiling specification, i.e. for the mapping from source to target programs with respect to their standard semantics, which allows for proving both specification and implementation correctness. We will sketch our approach of proving the correctness of the compiler implementation as a binary machine program, using a special technique of bootstrapping and double checking the results. We will discuss mechanical proof support for both compiling verification and compiler implementation verification in order to make them feasible parts of the software engineering of correct compilers. Verifix is a joint project on Correct Compilers funded by the Deutsche Forschungsgemeinschaft (DFG).},
+  doi =       {10.1.1.43.9780},
+  publisher = {Citeseer}
+}
+
+@Book{joyce1990totally,
+  title =     {Totally verified systems: Linking verified software to verified hardware},
+  publisher = {Springer},
+  year =      {1990},
+  author =    {Joyce, Jeffrey J},
+  editor =    {Miriam Leeser and Geoffrey Brown},
+  abstract =  {We describe exploratory efforts to design and verify a compiler for a formally verified microprocessor as one aspect of the eventual goal of building totally verified systems. Together with a formal proof of correctness for the microprocessor, this yields a precise and rigorously established link between the semantics of the source language and the execution of compiled code by the fabricated microchip. We describe, in particular: (1) how the limitations of real hardware influenced this proof; and (2) how the general framework provided by higher-order logic was used to formalize the compiler correctness problem for a hierarchically structured language.},
+  booktitle = {Hardware Specification, Verification and Synthesis: Mathematical Aspects},
+  doi =       {10.1007/0-387-97226-9_29},
+  pages =     {177--201},
+  url =       {http://dx.doi.org/10.1007/0-387-97226-9_29}
 }
 
 @Article{lammel2008google,
@@ -99,6 +115,58 @@ in TaxDC database. We discuss how our study can open up
 many new research directions in combating DC bugs.},
   doi =       {10.1145/2872362.2872374},
   url =       {http://dx.doi.org/10.1145/2872362.2872374}
+}
+
+@Article{lerner2003automatically,
+  author =    {Lerner, Sorin and Millstein, Todd and Chambers, Craig},
+  title =     {Automatically proving the correctness of compiler optimizations},
+  journal =   {ACM SIGPLAN Notices},
+  year =      {2003},
+  volume =    {38},
+  number =    {5},
+  pages =     {220--231},
+  publisher = {ACM}
+}
+
+@Article{leroy2009formal,
+  author =    {Leroy, Xavier},
+  title =     {Formal verification of a realistic compiler},
+  journal =   {Communications of the ACM},
+  year =      {2009},
+  volume =    {52},
+  number =    {7},
+  pages =     {107--115},
+  abstract =  {This paper reports on the development and formal verification (proof of semantic preservation) of CompCert, a compiler from Clight (a large subset of the C programming language) to PowerPC assembly code, using the Coq proof assistant both for programming the compiler and for proving its correctness. Such a verified compiler is useful in the context of critical software and its formal verification: the verification of the compiler guarantees that the safety properties proved on the source code hold for the executable compiled code as well.},
+  publisher = {ACM}
+}
+
+@Article{leroy2009formally,
+  author =    {Leroy, Xavier},
+  title =     {A formally verified compiler back-end},
+  journal =   {Journal of Automated Reasoning},
+  year =      {2009},
+  volume =    {43},
+  number =    {4},
+  pages =     {363--446},
+  abstract =  {This article describes the development and formal verification (proof of semantic preservation) of a compiler back-end from Cminor (a simple imperative intermediate language) to PowerPC assembly code, using the Coq proof assistant both for programming the compiler and for proving its soundness. Such a verified compiler is useful in the context of formal methods applied to the certification of critical software: the verification of the compiler guarantees that the safety properties proved on the source code hold for the executable compiled code as well.},
+  publisher = {Springer}
+}
+
+@Article{mccarthy1967correctness,
+  author =  {McCarthy, John and Painter, James},
+  title =   {Correctness of a compiler for arithmetic expressions},
+  journal = {Mathematical aspects of computer science},
+  year =    {1967},
+  volume =  {1},
+}
+
+@Article{milner1972proving,
+  author =  {Milner, Robin and Weyhrauch, Richard},
+  title =   {Proving compiler correctness in a mechanized logic},
+  journal = {Machine Intelligence},
+  year =    {1972},
+  volume =  {7},
+  pages =   {51--70},
 }
 
 @InProceedings{olston2008pig,
@@ -144,6 +212,27 @@ We describe a new language called Pig Latin that we have designed to fit in a sw
   url =       {http://dx.doi.org/10.1007/978-3-662-43652-3_21}
 }
 
+@InProceedings{strecker2002formal,
+  author =    {Strecker, Martin},
+  title =     {Formal Verification of a Java Compiler in Isabelle},
+  booktitle = {Automated Deduction---CADE-18: 18th International Conference on Automated Deduction Copenhagen, Denmark, July 27--30, 2002 Proceedings},
+  year =      {2002},
+  editor =    {Voronkov, Andrei},
+  pages =     {63--77},
+  address =   {Berlin, Heidelberg},
+  publisher = {Springer Berlin Heidelberg},
+  doi =       {10.1007/3-540-45620-1_5},
+  isbn =      {978-3-540-45620-9},
+  url =       {http://dx.doi.org/10.1007/3-540-45620-1_5}
+}
+
+@PhdThesis{stringer1998mechanical,
+  author = {Stringer-Calvert, David William John},
+  title =  {Mechanical verification of compiler correctness},
+  school = {Citeseer},
+  year =   {1998},
+}
+
 @InProceedings{su2009modeling,
   author =       {Su, Wen and Yang, Fan and Zhu, Huibiao and Li, Qin},
   title =        {Modeling MapReduce with CSP},
@@ -156,6 +245,15 @@ We describe a new language called Pig Latin that we have designed to fit in a sw
   abstract =     {As a programming model, MapReduce is implied for easier processing and generating large cluster of distributed data sets. We use CSP framework to model MapReduce system through which the parallelization of the computation and the distribution of data across multiple machines can be reflected. Some properties of MapReduce can be verified based on the achieved model.},
   doi =          {10.1109/TASE.2009.28},
   url =          {http://dx.doi.org/10.1109/TASE.2009.28}
+}
+
+@InProceedings{wand1995compiler,
+  author =       {Wand, Mitchell},
+  title =        {Compiler correctness for parallel languages},
+  booktitle =    {Proceedings of the seventh international conference on Functional programming languages and computer architecture},
+  year =         {1995},
+  pages =        {120--134},
+  organization = {ACM},
 }
 
 @InProceedings{xiao2014nondeterminism,
