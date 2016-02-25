@@ -14,7 +14,9 @@
 \usepackage{amsmath,amsthm, amssymb, latexsym}
 \boldmath
 \usepackage[english]{babel}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\bibliographystyle{apalike}
 
 \DeclareGraphicsExtensions{.pdf,.jpg,.png}
 \graphicspath{{figures/}}
@@ -50,9 +52,14 @@
 
   \input{intro}
   \input{problem}
+  \input{background}
   \input{approach}
-  %\input{evaluation}
+  \input{evaluation}
+  \input{relatedwork}
   \input{summary}
 
+  \begin{frame}[allowframebreaks]
+    \bibliography{refs}{}
+  \end{frame}
   \input{appendix}
 \end{document}

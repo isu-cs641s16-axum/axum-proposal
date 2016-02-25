@@ -42,7 +42,7 @@
 @Article{gates2009building,
   author =    {Gates, Alan F and Natkovich, Olga and Chopra, Shubham and Kamath, Pradeep and Narayanamurthy, Shravan M and Olston, Christopher and Reed, Benjamin and Srinivasan, Santhosh and Srivastava, Utkarsh},
   title =     {Building a high-level dataflow system on top of Map-Reduce: the Pig experience},
-  journal =   {Proceedings of the VLDB Endowment},
+  journal =   {Proceedings of the VLDB},
   year =      {2009},
   volume =    {2},
   number =    {2},
@@ -297,4 +297,19 @@ We improve Map-Reduce into a new model called Map-Reduce-Merge. It adds to Map-R
   abstract =     {As a programming model, MapReduce is popularly and widely used in processing and generating large cluster of data sets distributed on large amount of machines. With its widespread use, its validity and other major properties need to be analyzed in a formal framework. In this paper, a formal model is presented using CSP method. We focus on the dominant parts of MapReduce and formalize them in detail. Through this formal model, the processing and function of each component can be clearly reflected. Moreover, we illustrate this formal model by an example computation. The result reflects the validity of MapReduce in some appropriate applications.},
   doi =          {10.1109/ECBS.2010.50},
   url =          {http://dx.doi.org/10.1109/ECBS.2010.50}
+}
+
+@Article{zhang2013performance,
+  author =    {Zhang, Zhuoyao and Cherkasova, Ludmila and Verma, Abhishek and Loo, Boon Thau},
+  title =     {Performance Modeling and Optimization of Deadline-Driven Pig Programs},
+  journal =   {ACM Transactions on Autonomous and Adaptive Systems (TAAS)},
+  year =      {2013},
+  volume =    {8},
+  number =    {3},
+  pages =     {14},
+  month =     {sep},
+  abstract =  {Many applications associated with live business intelligence are written as complex data analysis programs defined by directed acyclic graphs of MapReduce jobs, for example, using Pig, Hive, or Scope frameworks. An increasing number of these applications have additional requirements for completion time guarantees. In this article, we consider the popular Pig framework that provides a high-level SQL-like abstraction on top of MapReduce engine for processing large data sets. There is a lack of performance models and analysis tools for automated performance management of such MapReduce jobs. We offer a performance modeling environment for Pig programs that automatically profiles jobs from the past runs and aims to solve the following inter-related problems: (i) estimating the completion time of a Pig program as a function of allocated resources; (ii) estimating the amount of resources (a number of map and reduce slots) required for completing a Pig program with a given (soft) deadline. First, we design a basic performance model that accurately predicts completion time and required resource allocation for a Pig program that is defined as a sequence of MapReduce jobs: predicted completion times are within 10% of the measured ones. Second, we optimize a Pig program execution by enforcing the optimal schedule of its concurrent jobs. For DAGs with concurrent jobs, this optimization helps reducing the program completion time: 10%--27% in our experiments. Moreover, it eliminates possible nondeterminism of concurrent jobs’ execution in the Pig program, and therefore, enables a more accurate performance model for Pig programs. Third, based on these optimizations, we propose a refined performance model for Pig programs with concurrent jobs. The proposed approach leads to significant resource savings (20%--60% in our experiments) compared with the original, unoptimized solution. We validate our solution using a 66-node Hadoop cluster and a diverse set of workloads: PigMix benchmark, TPC-H queries, and customized queries mining a collection of HP Labs’ web proxy logs.},
+  doi =       {10.1145/2518017.2518019},
+  publisher = {ACM},
+  url =       {http://dx.doi.org/10.1145/2518017.2518019}
 }

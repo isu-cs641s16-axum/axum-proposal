@@ -6,7 +6,7 @@ BIBTEX = bibtex
 
 all:
 	$(LATEX) $(NAME).tex
-#	$(BIBTEX) $(NAME)
+	$(BIBTEX) $(NAME)
 	$(LATEX) $(NAME).tex
 	$(LATEX) $(NAME).tex
 
@@ -17,4 +17,5 @@ report:
 	$(LATEX) $(TRNAME).tex
 
 clean:
-	rm -f *.blg *.bbl *.aux *.log *.dvi *.out *.pdf *.snm *.toc *.nav *~
+	rm -f *.blg *.bbl *.aux *.log *.dvi *.out *.pdf *.snm *.toc *.nav *~ \
+	      *.fdb_latexmk *.fls
