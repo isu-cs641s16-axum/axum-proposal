@@ -88,6 +88,18 @@
 
 \subsection{Three Main Papers}
 
+\begin{frame}{\citet[VLDB][]{gates2009building}}
+\emph{Building a HighLevel Dataflow System on top of MapReduce: The Pig
+Experience}:
+\begin{itemize}
+	\item This paper outlines the compilation phase of PigLatin programs and how
+          the logical plan of PigLatin is translated to actual Hadoop map-reduce
+          tasks.
+	\item But neither the semantics nor the compilation to map-reduce framework
+          have been formalized with proof of correctness.
+\end{itemize}
+\end{frame}
+
 \begin{frame}{\citet[SEFM]{ono2011using}}
 \emph{Using Coq in Specification and Program Extraction of Hadoop MapReduce
 Applications}
@@ -105,24 +117,11 @@ Applications}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{\citet[ABZ][]{pereverzeva2014formal}}
-\emph{Formal Derivation of Distributed MapReduce}
+\begin{frame}{\citet[Journal of Automated Reasoning][]{leroy2009formally}}
+\emph{A formally verified compiler back-end}
 \begin{itemize}
-	\item They proposed an approach to formal derivation, but it relies on
-          stepwise refinement of Event-B.
-	\item This approach also relies largely on proof based verification of
-          Event-B and does not provide any scope for extension of mapreduce.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{\citet[VLDB][]{gates2009building}}
-\emph{Building a HighLevel Dataflow System on top of MapReduce: The Pig
-Experience}:
-\begin{itemize}
-	\item This paper outlines the compilation phase of PigLatin programs and how
-          the logical plan of PigLatin is translated to actual Hadoop map-reduce
-          tasks.
-	\item But neither the semantics nor the compilation to map-reduce framework
-          have been formalized with proof of correctness.
+	\item Compcert: Formally verified compiler from Cminor to PPC assembly.
+    \item Programmed and proven sound using Coq.
+    \item Lots of background on compiler verification.
 \end{itemize}
 \end{frame}
